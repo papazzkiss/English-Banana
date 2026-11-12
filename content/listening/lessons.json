@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "review_policy": "Scripts, questions and answers are AI-written candidates (pending_review) until approved with scripts/review_content.py. Audio is synthesised from the transcript with Piper TTS (voice en_US-ljspeech-medium, trained on the public-domain LJ Speech dataset) by scripts/build_listening_audio.py.",
+  "voice": "piper:en_US-ljspeech-medium",
+  "lessons": [
+    {
+      "id": "ls.voicemail.001",
+      "title": "A voicemail from Anna",
+      "cefr_level": "A1",
+      "difficulty": "easy",
+      "transcript": "Hi Tom, it's Anna. I'm calling about Saturday. The party starts at seven o'clock, not six. It's at my new flat on Green Street, number twelve. Please bring some music. See you on Saturday. Bye!",
+      "audio_file": "ls.voicemail.001.wav",
+      "questions": [
+        {"id": "ls.voicemail.001.q1", "question": "What time does the party start?", "accepted_answers": ["seven", "7", "at seven", "seven o'clock", "7 o'clock", "at seven o'clock", "7pm", "7 pm", "7:00"]},
+        {"id": "ls.voicemail.001.q2", "question": "What is the number of Anna's flat?", "accepted_answers": ["twelve", "12", "number twelve", "number 12"]},
+        {"id": "ls.voicemail.001.q3", "question": "What should Tom bring?", "accepted_answers": ["music", "some music"]}
+      ],
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "ls.routine.001",
+      "title": "David's daily routine",
+      "cefr_level": "A1",
+      "difficulty": "easy",
+      "transcript": "My name is David. I get up at half past six every morning. I have breakfast with my sister, usually bread and coffee. Then I take the bus to work. I work in a bank in the city centre. I finish work at five o'clock, and in the evening I play tennis or watch television.",
+      "audio_file": "ls.routine.001.wav",
+      "questions": [
+        {"id": "ls.routine.001.q1", "question": "What time does David get up?", "accepted_answers": ["half past six", "6:30", "six thirty", "at half past six", "at 6:30", "at six thirty"]},
+        {"id": "ls.routine.001.q2", "question": "How does David go to work?", "accepted_answers": ["by bus", "bus", "he takes the bus", "the bus", "he goes by bus"]},
+        {"id": "ls.routine.001.q3", "question": "Where does David work?", "accepted_answers": ["in a bank", "a bank", "bank", "at a bank", "in a bank in the city centre"]}
+      ],
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "ls.train.001",
+      "title": "A train announcement",
+      "cefr_level": "A2",
+      "difficulty": "easy",
+      "transcript": "Good afternoon. This is an announcement for passengers travelling to Manchester. The two fifteen train to Manchester is delayed by twenty minutes because of a problem with the signals. The train will now leave from platform four, not platform two. We are sorry for the delay.",
+      "audio_file": "ls.train.001.wav",
+      "questions": [
+        {"id": "ls.train.001.q1", "question": "How long is the delay?", "accepted_answers": ["twenty minutes", "20 minutes", "20 mins", "twenty", "20"]},
+        {"id": "ls.train.001.q2", "question": "Which platform will the train leave from?", "accepted_answers": ["platform four", "four", "4", "platform 4"]},
+        {"id": "ls.train.001.q3", "question": "Why is the train late?", "accepted_answers": ["a problem with the signals", "because of a problem with the signals", "problem with the signals", "signal problems", "a signal problem"]}
+      ],
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "ls.weather.001",
+      "title": "Tomorrow's weather",
+      "cefr_level": "A2",
+      "difficulty": "medium",
+      "transcript": "Here is the weather for tomorrow. In the morning it will be cold and cloudy, with temperatures around eight degrees. In the afternoon there will be heavy rain in the north, so take an umbrella if you are going out. The south will stay dry, and on Sunday the sun will come back everywhere.",
+      "audio_file": "ls.weather.001.wav",
+      "questions": [
+        {"id": "ls.weather.001.q1", "question": "What will the temperature be in the morning?", "accepted_answers": ["eight degrees", "8 degrees", "around eight degrees", "about eight degrees", "8", "eight"]},
+        {"id": "ls.weather.001.q2", "question": "Where will there be heavy rain in the afternoon?", "accepted_answers": ["in the north", "the north", "north"]},
+        {"id": "ls.weather.001.q3", "question": "When will the sun come back?", "accepted_answers": ["on Sunday", "Sunday"]}
+      ],
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "ls.lostbag.001",
+      "title": "A lost bag",
+      "cefr_level": "A2",
+      "difficulty": "medium",
+      "transcript": "Hello, I think I left my bag on the number thirty-six bus this morning. It's a small black backpack. Inside there is a blue notebook, my glasses and a library book. My name is Maria Lopez. Please call me on oh seven seven, four five two, nine one eight if you find it.",
+      "audio_file": "ls.lostbag.001.wav",
+      "questions": [
+        {"id": "ls.lostbag.001.q1", "question": "What colour is the backpack?", "accepted_answers": ["black", "it's black", "it is black"]},
+        {"id": "ls.lostbag.001.q2", "question": "Which bus did Maria leave her bag on?", "accepted_answers": ["thirty-six", "36", "number thirty-six", "number 36", "the 36", "bus 36", "the number 36 bus", "the number thirty-six bus"]},
+        {"id": "ls.lostbag.001.q3", "question": "Name one thing that is inside the bag.", "accepted_answers": ["a blue notebook", "blue notebook", "notebook", "a notebook", "glasses", "her glasses", "my glasses", "a library book", "library book", "book"]}
+      ],
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "ls.museum.001",
+      "title": "Museum information",
+      "cefr_level": "B1",
+      "difficulty": "medium",
+      "transcript": "Welcome to the City History Museum. The museum is open from ten in the morning until six in the evening, Tuesday to Sunday. It is closed on Mondays. Entry is free for children under twelve, and adults pay eight euros. Guided tours in English start every hour, and the last tour begins at four o'clock.",
+      "audio_file": "ls.museum.001.wav",
+      "questions": [
+        {"id": "ls.museum.001.q1", "question": "On which day is the museum closed?", "accepted_answers": ["Monday", "Mondays", "on Monday", "on Mondays"]},
+        {"id": "ls.museum.001.q2", "question": "How much does an adult ticket cost?", "accepted_answers": ["eight euros", "8 euros", "€8", "8", "eight"]},
+        {"id": "ls.museum.001.q3", "question": "What time does the last guided tour begin?", "accepted_answers": ["four o'clock", "4 o'clock", "four", "4", "at four", "at 4", "4pm", "4 pm", "at four o'clock"]}
+      ],
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "ls.jobad.001",
+      "title": "A job advert on the radio",
+      "cefr_level": "B1",
+      "difficulty": "hard",
+      "transcript": "Are you friendly and good with people? The Green Leaf Hotel is looking for a receptionist to start next month. You will need to speak English and one other language, and you must be able to work at weekends. Experience is useful but not necessary, because we provide full training. To apply, send your CV to the hotel manager before the end of this week.",
+      "audio_file": "ls.jobad.001.wav",
+      "questions": [
+        {"id": "ls.jobad.001.q1", "question": "What job is the hotel offering?", "accepted_answers": ["receptionist", "a receptionist"]},
+        {"id": "ls.jobad.001.q2", "question": "Which languages must you speak?", "accepted_answers": ["English and one other language", "English and another language", "English plus another language"]},
+        {"id": "ls.jobad.001.q3", "question": "Why is experience not necessary?", "accepted_answers": ["because they provide full training", "they provide full training", "the hotel provides full training", "full training is provided", "because the hotel gives full training"]}
+      ],
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "ls.career.001",
+      "title": "A change of plans",
+      "cefr_level": "B1",
+      "difficulty": "hard",
+      "transcript": "I was planning to study medicine at university, but last summer I worked as a volunteer at an animal shelter, and it changed my mind. I realised that I enjoy working with animals much more than working with people in hospitals. So now I have decided to become a vet. It will take five years, but I think it is the right choice for me.",
+      "audio_file": "ls.career.001.wav",
+      "questions": [
+        {"id": "ls.career.001.q1", "question": "Where did the speaker work as a volunteer?", "accepted_answers": ["at an animal shelter", "an animal shelter", "animal shelter", "in an animal shelter"]},
+        {"id": "ls.career.001.q2", "question": "What does the speaker want to become now?", "accepted_answers": ["a vet", "vet", "a veterinarian", "veterinarian"]},
+        {"id": "ls.career.001.q3", "question": "How long will the studies take?", "accepted_answers": ["five years", "5 years", "five", "5"]}
+      ],
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    }
+  ]
+}

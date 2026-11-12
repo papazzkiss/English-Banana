@@ -1,0 +1,5 @@
+model,quality,performance,overall,latency_p50_s,latency_p95_s,latency_mean_s,ttft_p50_s,ttft_p95_s,tokens_per_s,output_tokens_mean,memory_gb,vram_gb,load_s,requests,errors,contract_failures,dim_grammar,dim_explanation,dim_naturalness,dim_instruction_following,dim_relevance,dim_vocabulary,dim_conversation
+Qwen3-8B Q6_K,100.0,79.0,97.9,14.85,42.19,19.08,9.95,25.26,6.86,58.94,7.44,0.0,8.852414288,18,0,0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+Qwen3-8B Q8_0,96.1,67.3,93.2,16.24,40.19,18.96,7.37,18.74,5.41,59.89,9.56,0.0,8.072792701,18,0,0,100.0,100.0,100.0,100.0,100.0,72.7,100.0
+Qwen3-8B Q4_K_M,92.3,100.0,93.1,11.71,25.0,13.08,6.32,15.75,8.66,55.5,5.94,0.0,12.339208067,18,0,0,77.8,70.0,100.0,98.4,100.0,100.0,100.0
+Qwen3-8B Q5_K_M,93.7,83.1,92.6,16.1,45.33,19.97,11.69,29.59,8.09,61.11,6.56,0.0,7.323941889,18,0,0,83.3,100.0,100.0,100.0,100.0,72.7,100.0

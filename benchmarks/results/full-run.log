@@ -1,0 +1,196 @@
+Qwen3-8B Q5_K_M: template differs from qwen3:8b; using alias bench/qwen3-8b-gguf-q5_k_m:aligned
+Qwen3-8B Q6_K: template differs from qwen3:8b; using alias bench/qwen3-8b-gguf-q6_k:aligned
+Qwen3-8B Q4_K_M: ok qwen3:8b 
+Qwen3-8B Q5_K_M: ok bench/qwen3-8b-gguf-q5_k_m:aligned weights of hf.co/Qwen/Qwen3-8B-GGUF:Q5_K_M, template + defaults of qwen3:8b
+Qwen3-8B Q6_K: ok bench/qwen3-8b-gguf-q6_k:aligned weights of hf.co/Qwen/Qwen3-8B-GGUF:Q6_K, template + defaults of qwen3:8b
+Qwen3-8B Q8_0: ok qwen3:8b-q8_0 
+
+=== Qwen3-8B Q4_K_M (qwen3:8b) run 1 — reload + warm-up ×2
+[1/576] Qwen3-8B Q4_K_M run1 gc.01    25.1s ttft=15.65s tok=76 score= 71.4  eta 422 min
+[2/576] Qwen3-8B Q4_K_M run1 gc.02     3.7s ttft=0.68s tok=25 score=100.0  eta 228 min
+[3/576] Qwen3-8B Q4_K_M run1 gc.03     5.5s ttft=2.54s tok=25 score= 42.9  eta 169 min
+[4/576] Qwen3-8B Q4_K_M run1 gc.04     6.4s ttft=3.35s tok=25 score=100.0  eta 142 min
+[5/576] Qwen3-8B Q4_K_M run1 gc.05    14.0s ttft=2.70s tok=90 score=100.0  eta 140 min
+[6/576] Qwen3-8B Q4_K_M run1 gc.06    11.2s ttft=2.52s tok=71 score= 66.7  eta 134 min
+[7/576] Qwen3-8B Q4_K_M run1 gc.07    14.7s ttft=3.07s tok=93 score= 66.7  eta 135 min
+[8/576] Qwen3-8B Q4_K_M run1 gc.08    14.9s ttft=2.82s tok=98 score=100.0  eta 135 min
+[9/576] Qwen3-8B Q4_K_M run1 gc.09    16.5s ttft=2.75s tok=111 score= 85.7  eta 137 min
+[10/576] Qwen3-8B Q4_K_M run1 gc.10    20.6s ttft=2.75s tok=139 score= 71.4  eta 143 min
+[11/576] Qwen3-8B Q4_K_M run1 ge.01    13.6s ttft=6.83s tok=57 score=100.0  eta 141 min
+[12/576] Qwen3-8B Q4_K_M run1 ge.02     7.0s ttft=2.55s tok=39 score= 92.9  eta 135 min
+[13/576] Qwen3-8B Q4_K_M run1 ge.03    10.2s ttft=2.96s tok=62 score=100.0  eta 132 min
+[14/576] Qwen3-8B Q4_K_M run1 ge.04     9.9s ttft=3.21s tok=56 score=100.0  eta 129 min
+[15/576] Qwen3-8B Q4_K_M run1 ge.05    10.6s ttft=3.77s tok=56 score=100.0  eta 126 min
+[16/576] Qwen3-8B Q4_K_M run1 ge.06     8.2s ttft=2.94s tok=46 score= 78.6  eta 123 min
+[17/576] Qwen3-8B Q4_K_M run1 ge.07    11.5s ttft=3.59s tok=67 score=100.0  eta 122 min
+[18/576] Qwen3-8B Q4_K_M run1 ge.08    10.0s ttft=3.07s tok=61 score=100.0  eta 120 min
+[19/576] Qwen3-8B Q4_K_M run1 cv.01     6.8s ttft=5.12s tok=16 score=100.0  eta 117 min
+[20/576] Qwen3-8B Q4_K_M run1 cv.02     3.8s ttft=1.57s tok=20 score=100.0  eta 113 min
+[21/576] Qwen3-8B Q4_K_M run1 cv.03     2.8s ttft=1.24s tok=14 score=100.0  eta 108 min
+[22/576] Qwen3-8B Q4_K_M run1 cv.04     8.0s ttft=4.91s tok=28 score=100.0  eta 107 min
+[23/576] Qwen3-8B Q4_K_M run1 cv.05     3.1s ttft=1.41s tok=15 score=100.0  eta 103 min
+[24/576] Qwen3-8B Q4_K_M run1 cv.06     8.9s ttft=4.95s tok=35 score= 83.3  eta 102 min
+[25/576] Qwen3-8B Q4_K_M run1 cv.07     4.4s ttft=1.40s tok=27 score=100.0  eta 99 min
+[26/576] Qwen3-8B Q4_K_M run1 cv.08     8.7s ttft=5.10s tok=32 score= 76.9  eta 98 min
+[27/576] Qwen3-8B Q4_K_M run1 vo.01     6.6s ttft=2.34s tok=38 score=100.0  eta 97 min
+[28/576] Qwen3-8B Q4_K_M run1 vo.02     4.4s ttft=0.47s tok=36 score=100.0  eta 95 min
+[29/576] Qwen3-8B Q4_K_M run1 vo.03     5.1s ttft=1.94s tok=29 score=100.0  eta 93 min
+[30/576] Qwen3-8B Q4_K_M run1 vo.04     4.0s ttft=0.49s tok=32 score=100.0  eta 91 min
+[31/576] Qwen3-8B Q4_K_M run1 vo.05     4.5s ttft=0.48s tok=36 score=100.0  eta 89 min
+[32/576] Qwen3-8B Q4_K_M run1 vo.06     5.2s ttft=0.55s tok=42 score=100.0  eta 88 min
+[33/576] Qwen3-8B Q4_K_M run1 vo.07     4.1s ttft=0.46s tok=33 score=100.0  eta 86 min
+[34/576] Qwen3-8B Q4_K_M run1 vo.08     5.9s ttft=2.05s tok=35 score=100.0  eta 85 min
+[35/576] Qwen3-8B Q4_K_M run1 cq.01    11.9s ttft=2.22s tok=86 score=100.0  eta 85 min
+[36/576] Qwen3-8B Q4_K_M run1 cq.02     9.7s ttft=0.88s tok=79 score=100.0  eta 85 min
+[37/576] Qwen3-8B Q4_K_M run1 cq.03    12.1s ttft=0.83s tok=100 score=100.0  eta 86 min
+[38/576] Qwen3-8B Q4_K_M run1 cq.04    12.4s ttft=0.83s tok=102 score=100.0  eta 86 min
+[39/576] Qwen3-8B Q4_K_M run1 cq.05    15.6s ttft=0.72s tok=131 score=100.0  eta 87 min
+[40/576] Qwen3-8B Q4_K_M run1 cq.06    11.1s ttft=0.64s tok=93 score=100.0  eta 87 min
+[41/576] Qwen3-8B Q4_K_M run1 cq.07    12.6s ttft=0.77s tok=105 score=100.0  eta 88 min
+[42/576] Qwen3-8B Q4_K_M run1 vs.01    10.8s ttft=6.49s tok=38 score=100.0  eta 88 min
+[43/576] Qwen3-8B Q4_K_M run1 vs.02     9.1s ttft=5.66s tok=30 score= 92.3  eta 88 min
+[44/576] Qwen3-8B Q4_K_M run1 vs.03     2.4s ttft=0.72s tok=15 score=100.0  eta 86 min
+[45/576] Qwen3-8B Q4_K_M run1 vs.04     9.1s ttft=5.77s tok=30 score= 92.3  eta 86 min
+[46/576] Qwen3-8B Q4_K_M run1 vs.05     3.9s ttft=0.79s tok=28 score=100.0  eta 84 min
+[47/576] Qwen3-8B Q4_K_M run1 vs.06     2.8s ttft=0.68s tok=19 score= 84.6  eta 83 min
+[48/576] Qwen3-8B Q4_K_M run1 vs.07     3.0s ttft=1.51s tok=14 score= 84.6  eta 82 min
+
+=== Qwen3-8B Q4_K_M (qwen3:8b) run 2 — reload + warm-up ×2
+[49/576] Qwen3-8B Q4_K_M run2 gc.01    25.0s ttft=15.66s tok=76 score= 71.4  eta 87 min
+[50/576] Qwen3-8B Q4_K_M run2 gc.02     3.6s ttft=0.63s tok=25 score=100.0  eta 86 min
+[51/576] Qwen3-8B Q4_K_M run2 gc.03     5.5s ttft=2.55s tok=25 score= 42.9  eta 85 min
+[52/576] Qwen3-8B Q4_K_M run2 gc.04     6.4s ttft=3.44s tok=25 score=100.0  eta 84 min
+[53/576] Qwen3-8B Q4_K_M run2 gc.05    13.7s ttft=2.64s tok=90 score=100.0  eta 85 min
+[54/576] Qwen3-8B Q4_K_M run2 gc.06    11.1s ttft=2.46s tok=71 score= 66.7  eta 85 min
+[55/576] Qwen3-8B Q4_K_M run2 gc.07    14.3s ttft=2.98s tok=93 score= 66.7  eta 86 min
+[56/576] Qwen3-8B Q4_K_M run2 gc.08    14.9s ttft=2.75s tok=98 score=100.0  eta 86 min
+[57/576] Qwen3-8B Q4_K_M run2 gc.09    16.3s ttft=2.82s tok=111 score= 85.7  eta 87 min
+[58/576] Qwen3-8B Q4_K_M run2 gc.10    19.7s ttft=2.85s tok=139 score= 71.4  eta 88 min
+[59/576] Qwen3-8B Q4_K_M run2 ge.01    12.7s ttft=6.97s tok=50 score= 60.0  eta 88 min
+[60/576] Qwen3-8B Q4_K_M run2 ge.02     7.1s ttft=2.68s tok=39 score= 92.9  eta 88 min
+[61/576] Qwen3-8B Q4_K_M run2 ge.03    10.0s ttft=2.80s tok=62 score=100.0  eta 88 min
+[62/576] Qwen3-8B Q4_K_M run2 ge.04     9.8s ttft=3.32s tok=57 score= 92.9  eta 87 min
+[63/576] Qwen3-8B Q4_K_M run2 ge.05    10.1s ttft=3.21s tok=60 score=100.0  eta 87 min
+[64/576] Qwen3-8B Q4_K_M run2 ge.06     8.3s ttft=2.96s tok=47 score= 78.6  eta 87 min
+[65/576] Qwen3-8B Q4_K_M run2 ge.07    11.0s ttft=3.69s tok=64 score=100.0  eta 87 min
+[66/576] Qwen3-8B Q4_K_M run2 ge.08    10.1s ttft=3.04s tok=61 score=100.0  eta 87 min
+[67/576] Qwen3-8B Q4_K_M run2 cv.01     7.2s ttft=5.35s tok=17 score=100.0  eta 86 min
+[68/576] Qwen3-8B Q4_K_M run2 cv.02     3.7s ttft=1.47s tok=20 score=100.0  eta 85 min
+[69/576] Qwen3-8B Q4_K_M run2 cv.03     2.6s ttft=1.28s tok=12 score=100.0  eta 84 min
+[70/576] Qwen3-8B Q4_K_M run2 cv.04     8.1s ttft=5.01s tok=28 score=100.0  eta 84 min
+[71/576] Qwen3-8B Q4_K_M run2 cv.05     3.2s ttft=1.47s tok=15 score=100.0  eta 83 min
+[72/576] Qwen3-8B Q4_K_M run2 cv.06     7.2s ttft=5.29s tok=17 score=100.0  eta 82 min
+[73/576] Qwen3-8B Q4_K_M run2 cv.07     4.9s ttft=1.78s tok=27 score=100.0  eta 81 min
+[74/576] Qwen3-8B Q4_K_M run2 cv.08     8.0s ttft=6.33s tok=15 score= 76.9  eta 81 min
+[75/576] Qwen3-8B Q4_K_M run2 vo.01     6.5s ttft=2.31s tok=38 score=100.0  eta 81 min
+[76/576] Qwen3-8B Q4_K_M run2 vo.02     4.4s ttft=0.46s tok=36 score=100.0  eta 80 min
+[77/576] Qwen3-8B Q4_K_M run2 vo.03     5.2s ttft=2.02s tok=29 score=100.0  eta 79 min
+[78/576] Qwen3-8B Q4_K_M run2 vo.04     3.9s ttft=0.46s tok=32 score=100.0  eta 78 min
+[79/576] Qwen3-8B Q4_K_M run2 vo.05     4.4s ttft=0.48s tok=36 score=100.0  eta 78 min
+[80/576] Qwen3-8B Q4_K_M run2 vo.06     5.1s ttft=0.47s tok=42 score=100.0  eta 77 min
+[81/576] Qwen3-8B Q4_K_M run2 vo.07     4.0s ttft=0.49s tok=33 score=100.0  eta 76 min
+[82/576] Qwen3-8B Q4_K_M run2 vo.08     6.3s ttft=2.07s tok=39 score=100.0  eta 76 min
+[83/576] Qwen3-8B Q4_K_M run2 cq.01    15.8s ttft=2.42s tok=117 score=100.0  eta 76 min
+[84/576] Qwen3-8B Q4_K_M run2 cq.02    12.1s ttft=0.98s tok=81 score=100.0  eta 77 min
+[85/576] Qwen3-8B Q4_K_M run2 cq.03    15.5s ttft=1.87s tok=100 score=100.0  eta 77 min
+[86/576] Qwen3-8B Q4_K_M run2 cq.04    13.2s ttft=0.83s tok=102 score=100.0  eta 77 min
+[87/576] Qwen3-8B Q4_K_M run2 cq.05    16.7s ttft=0.74s tok=131 score=100.0  eta 78 min
+[88/576] Qwen3-8B Q4_K_M run2 cq.06    16.3s ttft=0.63s tok=124 score=100.0  eta 78 min
+[89/576] Qwen3-8B Q4_K_M run2 cq.07    10.6s ttft=0.66s tok=82 score=100.0  eta 78 min
+[90/576] Qwen3-8B Q4_K_M run2 vs.01    13.1s ttft=8.00s tok=38 score=100.0  eta 78 min
+[91/576] Qwen3-8B Q4_K_M run2 vs.02    10.7s ttft=7.35s tok=30 score= 92.3  eta 78 min
+[92/576] Qwen3-8B Q4_K_M run2 vs.03     2.8s ttft=0.77s tok=19 score= 85.7  eta 77 min
+[93/576] Qwen3-8B Q4_K_M run2 vs.04     9.6s ttft=5.72s tok=30 score= 92.3  eta 77 min
+[94/576] Qwen3-8B Q4_K_M run2 vs.05     5.5s ttft=1.50s tok=28 score=100.0  eta 77 min
+[95/576] Qwen3-8B Q4_K_M run2 vs.06     2.8s ttft=0.67s tok=19 score= 84.6  eta 76 min
+[96/576] Qwen3-8B Q4_K_M run2 vs.07     4.4s ttft=2.49s tok=14 score= 84.6  eta 75 min
+
+=== Qwen3-8B Q4_K_M (qwen3:8b) run 3 — reload + warm-up ×2
+[97/576] Qwen3-8B Q4_K_M run3 gc.01    28.2s ttft=19.10s tok=76 score= 71.4  eta 79 min
+[98/576] Qwen3-8B Q4_K_M run3 gc.02     4.5s ttft=0.64s tok=25 score=100.0  eta 78 min
+[99/576] Qwen3-8B Q4_K_M run3 gc.03     7.2s ttft=4.35s tok=25 score= 42.9  eta 78 min
+[100/576] Qwen3-8B Q4_K_M run3 gc.04     6.6s ttft=3.49s tok=25 score=100.0  eta 77 min
+[101/576] Qwen3-8B Q4_K_M run3 gc.05    18.1s ttft=5.34s tok=90 score=100.0  eta 78 min
+[102/576] Qwen3-8B Q4_K_M run3 gc.06    13.4s ttft=2.51s tok=71 score= 66.7  eta 78 min
+[103/576] Qwen3-8B Q4_K_M run3 gc.07    14.3s ttft=3.19s tok=93 score= 66.7  eta 78 min
+[104/576] Qwen3-8B Q4_K_M run3 gc.08    14.4s ttft=2.66s tok=98 score=100.0  eta 78 min
+[105/576] Qwen3-8B Q4_K_M run3 gc.09    16.2s ttft=2.85s tok=111 score= 85.7  eta 79 min
+[106/576] Qwen3-8B Q4_K_M run3 gc.10    19.4s ttft=2.69s tok=139 score= 71.4  eta 79 min
+[107/576] Qwen3-8B Q4_K_M run3 ge.01    15.2s ttft=8.05s tok=57 score=100.0  eta 79 min
+[108/576] Qwen3-8B Q4_K_M run3 ge.02     7.4s ttft=2.78s tok=39 score= 92.9  eta 79 min
+[109/576] Qwen3-8B Q4_K_M run3 ge.03    10.4s ttft=3.13s tok=62 score=100.0  eta 79 min
+[110/576] Qwen3-8B Q4_K_M run3 ge.04    10.1s ttft=3.33s tok=58 score= 92.9  eta 79 min
+[111/576] Qwen3-8B Q4_K_M run3 ge.05    11.3s ttft=3.37s tok=68 score=100.0  eta 79 min
+[112/576] Qwen3-8B Q4_K_M run3 ge.06     8.3s ttft=3.06s tok=46 score= 92.9  eta 78 min
+[113/576] Qwen3-8B Q4_K_M run3 ge.07    10.8s ttft=3.69s tok=62 score=100.0  eta 78 min
+[114/576] Qwen3-8B Q4_K_M run3 ge.08    10.1s ttft=3.11s tok=61 score=100.0  eta 78 min
+[115/576] Qwen3-8B Q4_K_M run3 cv.01     7.1s ttft=5.25s tok=17 score=100.0  eta 78 min
+[116/576] Qwen3-8B Q4_K_M run3 cv.02     3.9s ttft=1.56s tok=20 score=100.0  eta 77 min
+[117/576] Qwen3-8B Q4_K_M run3 cv.03     2.7s ttft=1.27s tok=13 score=100.0  eta 76 min
+[118/576] Qwen3-8B Q4_K_M run3 cv.04     8.0s ttft=5.02s tok=26 score=100.0  eta 76 min
+[119/576] Qwen3-8B Q4_K_M run3 cv.05     3.1s ttft=1.46s tok=15 score=100.0  eta 76 min
+[120/576] Qwen3-8B Q4_K_M run3 cv.06     9.2s ttft=5.25s tok=35 score= 83.3  eta 75 min
+[121/576] Qwen3-8B Q4_K_M run3 cv.07     3.6s ttft=1.43s tok=19 score=100.0  eta 75 min
+[122/576] Qwen3-8B Q4_K_M run3 cv.08     8.9s ttft=5.23s tok=32 score= 76.9  eta 75 min
+[123/576] Qwen3-8B Q4_K_M run3 vo.01     6.6s ttft=2.33s tok=38 score=100.0  eta 74 min
+[124/576] Qwen3-8B Q4_K_M run3 vo.02     4.5s ttft=0.49s tok=36 score=100.0  eta 74 min
+[125/576] Qwen3-8B Q4_K_M run3 vo.03     5.2s ttft=2.05s tok=29 score=100.0  eta 73 min
+[126/576] Qwen3-8B Q4_K_M run3 vo.04     4.0s ttft=0.47s tok=32 score=100.0  eta 73 min
+[127/576] Qwen3-8B Q4_K_M run3 vo.05     4.6s ttft=0.55s tok=36 score=100.0  eta 72 min
+[128/576] Qwen3-8B Q4_K_M run3 vo.06     5.3s ttft=0.56s tok=42 score=100.0  eta 72 min
+[129/576] Qwen3-8B Q4_K_M run3 vo.07     4.2s ttft=0.50s tok=33 score=100.0  eta 71 min
+[130/576] Qwen3-8B Q4_K_M run3 vo.08     6.5s ttft=2.15s tok=39 score=100.0  eta 71 min
+[131/576] Qwen3-8B Q4_K_M run3 cq.01    15.6s ttft=2.39s tok=116 score=100.0  eta 71 min
+[132/576] Qwen3-8B Q4_K_M run3 cq.02     9.8s ttft=0.89s tok=79 score=100.0  eta 71 min
+[133/576] Qwen3-8B Q4_K_M run3 cq.03    11.3s ttft=0.89s tok=92 score=100.0  eta 71 min
+[134/576] Qwen3-8B Q4_K_M run3 cq.04    12.6s ttft=0.83s tok=102 score=100.0  eta 71 min
+[135/576] Qwen3-8B Q4_K_M run3 cq.05    15.7s ttft=0.74s tok=131 score=100.0  eta 71 min
+[136/576] Qwen3-8B Q4_K_M run3 cq.06    16.2s ttft=0.63s tok=137 score=100.0  eta 71 min
+[137/576] Qwen3-8B Q4_K_M run3 cq.07    10.2s ttft=0.67s tok=85 score=100.0  eta 71 min
+[138/576] Qwen3-8B Q4_K_M run3 vs.01    11.0s ttft=6.70s tok=38 score=100.0  eta 71 min
+[139/576] Qwen3-8B Q4_K_M run3 vs.02     9.2s ttft=5.82s tok=30 score= 92.3  eta 71 min
+[140/576] Qwen3-8B Q4_K_M run3 vs.03     4.0s ttft=0.74s tok=29 score=100.0  eta 70 min
+[141/576] Qwen3-8B Q4_K_M run3 vs.04     9.4s ttft=5.91s tok=30 score= 92.3  eta 70 min
+[142/576] Qwen3-8B Q4_K_M run3 vs.05     5.2s ttft=0.79s tok=39 score=100.0  eta 70 min
+[143/576] Qwen3-8B Q4_K_M run3 vs.06     3.1s ttft=0.71s tok=22 score= 84.6  eta 69 min
+[144/576] Qwen3-8B Q4_K_M run3 vs.07     3.0s ttft=1.61s tok=13 score= 84.6  eta 69 min
+
+=== Qwen3-8B Q5_K_M (bench/qwen3-8b-gguf-q5_k_m:aligned) run 1 — reload + warm-up ×2
+[145/576] Qwen3-8B Q5_K_M run1 gc.01    45.9s ttft=30.00s tok=121 score= 85.7  eta 71 min
+[146/576] Qwen3-8B Q5_K_M run1 gc.02     4.3s ttft=1.11s tok=25 score=100.0  eta 71 min
+[147/576] Qwen3-8B Q5_K_M run1 gc.03    18.9s ttft=4.64s tok=104 score=  7.1  eta 71 min
+[148/576] Qwen3-8B Q5_K_M run1 gc.04    13.2s ttft=6.49s tok=51 score=100.0  eta 71 min
+[149/576] Qwen3-8B Q5_K_M run1 gc.05    17.7s ttft=4.95s tok=95 score= 85.7  eta 71 min
+[150/576] Qwen3-8B Q5_K_M run1 gc.06    12.1s ttft=4.49s tok=60 score= 11.1  eta 71 min
+[151/576] Qwen3-8B Q5_K_M run1 gc.07    17.7s ttft=5.32s tok=93 score= 66.7  eta 71 min
+[152/576] Qwen3-8B Q5_K_M run1 gc.08    18.2s ttft=5.21s tok=90 score= 85.7  eta 72 min
+[153/576] Qwen3-8B Q5_K_M run1 gc.09    21.4s ttft=5.52s tok=112 score=100.0  eta 72 min
+[154/576] Qwen3-8B Q5_K_M run1 gc.10    20.0s ttft=5.29s tok=99 score= 85.7  eta 72 min
+[155/576] Qwen3-8B Q5_K_M run1 ge.01    21.1s ttft=13.97s tok=57 score=100.0  eta 73 min
+[156/576] Qwen3-8B Q5_K_M run1 ge.02    12.6s ttft=4.94s tok=58 score=100.0  eta 73 min
+[157/576] Qwen3-8B Q5_K_M run1 ge.03    13.9s ttft=5.58s tok=62 score=100.0  eta 73 min
+[158/576] Qwen3-8B Q5_K_M run1 ge.04    14.3s ttft=6.26s tok=63 score=100.0  eta 73 min
+[159/576] Qwen3-8B Q5_K_M run1 ge.05    13.8s ttft=5.93s tok=61 score=100.0  eta 73 min
+[160/576] Qwen3-8B Q5_K_M run1 ge.06    13.4s ttft=5.64s tok=64 score=100.0  eta 72 min
+[161/576] Qwen3-8B Q5_K_M run1 ge.07    14.9s ttft=6.99s tok=64 score=100.0  eta 73 min
+[162/576] Qwen3-8B Q5_K_M run1 ge.08    14.5s ttft=5.83s tok=70 score=100.0  eta 73 min
+[163/576] Qwen3-8B Q5_K_M run1 cv.01    11.9s ttft=10.20s tok=15 score= 83.3  eta 72 min
+[164/576] Qwen3-8B Q5_K_M run1 cv.02     5.1s ttft=2.70s tok=20 score=100.0  eta 72 min
+[165/576] Qwen3-8B Q5_K_M run1 cv.03     3.9s ttft=2.39s tok=13 score=100.0  eta 72 min
+[166/576] Qwen3-8B Q5_K_M run1 cv.04    13.1s ttft=9.65s tok=28 score=100.0  eta 71 min
+[167/576] Qwen3-8B Q5_K_M run1 cv.05     4.5s ttft=2.66s tok=15 score=100.0  eta 71 min
+[168/576] Qwen3-8B Q5_K_M run1 cv.06    11.7s ttft=9.92s tok=15 score=100.0  eta 71 min
+[169/576] Qwen3-8B Q5_K_M run1 cv.07     6.0s ttft=2.61s tok=28 score=100.0  eta 71 min
+[170/576] Qwen3-8B Q5_K_M run1 cv.08    13.4s ttft=11.12s tok=18 score= 92.3  eta 71 min
+[171/576] Qwen3-8B Q5_K_M run1 vo.01     9.1s ttft=4.45s tok=36 score=100.0  eta 70 min
+[172/576] Qwen3-8B Q5_K_M run1 vo.02     5.5s ttft=0.70s tok=37 score=100.0  eta 70 min
+[173/576] Qwen3-8B Q5_K_M run1 vo.03     7.4s ttft=3.96s tok=29 score=100.0  eta 70 min
+[174/576] Qwen3-8B Q5_K_M run1 vo.04     4.6s ttft=0.76s tok=32 score=100.0  eta 69 min
+[175/576] Qwen3-8B Q5_K_M run1 vo.05     5.0s ttft=0.78s tok=34 score=100.0  eta 69 min
+[176/576] Qwen3-8B Q5_K_M run1 vo.06     6.0s ttft=0.73s tok=41 score=100.0  eta 69 min
+[177/576] Qwen3-8B Q5_K_M run1 vo.07     4.7s ttft=0.71s tok=33 score=100.0  eta 68 min
+[178/576] Qwen3-8B Q5_K_M run1 vo.08     8.2s ttft=3.79s tok=37 score= 87.5  eta 68 min
+[179/576] Qwen3-8B Q5_K_M run1 cq.01    16.8s ttft=4.43s tok=99 score=100.0  eta 68 min
+[180/576] Qwen3-8B Q5_K_M run1 cq.02    13.1s ttft=1.65s tok=91 score=100.0  eta 68 min
+[181/576] Qwen3-8B Q5_K_M run1 cq.03    10.5s ttft=1.43s tok=73 score=100.0  eta 68 min
+

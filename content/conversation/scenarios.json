@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "review_policy": "AI-written candidates (pending_review) until approved with scripts/review_content.py.",
+  "scenarios": [
+    {
+      "id": "cv.cafe.001",
+      "title": "Ordering lunch at a café",
+      "cefr_level": "A1",
+      "assistant_role": "a friendly waiter at Rosie's Café in London",
+      "learner_role": "a customer who wants lunch",
+      "situation": "The learner is a customer at a small café in London and wants to order lunch.",
+      "opening_line": "Hi there! Welcome to Rosie's Café. What can I get you today?",
+      "goals": ["Order a drink and something to eat", "Ask how much it costs", "Say how you want to pay"],
+      "target_skills": ["grammar.articles", "grammar.present_simple_continuous"],
+      "max_learner_turns": 5,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "cv.directions.001",
+      "title": "Asking for directions",
+      "cefr_level": "A2",
+      "assistant_role": "a helpful local person on a street in a small English town",
+      "learner_role": "a tourist looking for the train station",
+      "situation": "The learner is a tourist who is lost and needs to find the train station.",
+      "opening_line": "Hello! You look a bit lost. Can I help you?",
+      "goals": ["Ask how to get to the train station", "Check how far it is", "Thank the person"],
+      "target_skills": ["grammar.prepositions_time_place", "grammar.articles"],
+      "max_learner_turns": 5,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "cv.hotel.001",
+      "title": "Checking in at a hotel",
+      "cefr_level": "A2",
+      "assistant_role": "a polite receptionist at the Grand Hotel",
+      "learner_role": "a guest arriving in the evening",
+      "situation": "The learner arrives at a hotel in the evening and wants to check in.",
+      "opening_line": "Good evening, and welcome to the Grand Hotel. Do you have a reservation?",
+      "goals": ["Give your name and the dates of your stay", "Ask what time breakfast is", "Ask for the wifi password"],
+      "target_skills": ["grammar.prepositions_time_place", "grammar.present_simple_continuous"],
+      "max_learner_turns": 5,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "cv.holiday.001",
+      "title": "Talking about your last holiday",
+      "cefr_level": "B1",
+      "assistant_role": "a friendly colleague at work",
+      "learner_role": "someone who has just come back from a holiday",
+      "situation": "The learner has just returned to work after a holiday and a colleague asks about it.",
+      "opening_line": "Hey, welcome back! How was your holiday? Where did you go?",
+      "goals": ["Say where you went and who with", "Describe two things you did", "Compare the place with your home town"],
+      "target_skills": ["grammar.past_simple_present_perfect", "grammar.comparatives_superlatives"],
+      "max_learner_turns": 6,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    }
+  ]
+}

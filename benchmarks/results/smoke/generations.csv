@@ -1,0 +1,13 @@
+model,test_id,category,run,ttft_s,total_s,output_tokens,input_tokens,tokens_per_s,contract_ok,score,error
+Qwen3-8B Q4_K_M,gc.01,grammar_correction,1,16.274,25.684,76,633,8.077,True,71.429,
+Qwen3-8B Q4_K_M,ge.01,grammar_explanation,1,7.405,13.988,57,284,8.659,True,100.0,
+Qwen3-8B Q4_K_M,cv.02,conversation,1,6.086,8.352,20,241,8.826,True,100.0,
+Qwen3-8B Q4_K_M,vo.01,vocabulary,1,2.451,6.725,38,96,8.891,True,100.0,
+Qwen3-8B Q4_K_M,cq.01,complex,1,2.327,12.188,86,96,8.72,True,100.0,
+Qwen3-8B Q4_K_M,vs.01,voice,1,6.741,11.069,38,267,8.779,True,100.0,
+Qwen3-8B Q5_K_M,gc.01,grammar_correction,1,30.099,46.314,121,633,7.462,True,85.714,
+Qwen3-8B Q5_K_M,ge.01,grammar_explanation,1,13.354,20.45,57,284,8.032,True,100.0,
+Qwen3-8B Q5_K_M,cv.02,conversation,1,11.287,13.699,20,241,8.29,True,100.0,
+Qwen3-8B Q5_K_M,vo.01,vocabulary,1,4.423,8.717,36,96,8.385,True,81.25,
+Qwen3-8B Q5_K_M,cq.01,complex,1,4.338,16.547,99,96,8.109,True,100.0,
+Qwen3-8B Q5_K_M,vs.01,voice,1,12.575,16.329,31,267,8.258,True,100.0,

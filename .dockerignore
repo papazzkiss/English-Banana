@@ -1,0 +1,12 @@
+.venv
+**/__pycache__
+.pytest_cache
+.ruff_cache
+*.db
+var/
+frontend/
+tests/
+content/vocabulary/sources/
+.git
+.env
+content/bank/audio/

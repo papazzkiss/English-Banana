@@ -1,0 +1,2 @@
+model,quality,performance,overall,latency_p50_s,latency_p95_s,latency_mean_s,ttft_p50_s,ttft_p95_s,tokens_per_s,output_tokens_mean,memory_gb,vram_gb,load_s,requests,errors,contract_failures,dim_grammar,dim_explanation,dim_naturalness,dim_instruction_following,dim_relevance,dim_vocabulary,dim_conversation
+Qwen3-8B Q4_K_M,91.6,100.0,92.4,9.13,16.41,8.99,2.52,6.6,8.59,52.81,5.94,0.0,12.335954328,48,0,0,73.8,87.7,98.2,94.8,93.5,95.5,97.9

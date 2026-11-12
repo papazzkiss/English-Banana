@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "note": "Question-bank taxonomy: the skills bank questions train (added to content skills) and the grammar points generated for. Existing skills are reused where the point belongs to them.",
+  "skills": [
+    {
+      "id": "grammar.past_continuous",
+      "module": "grammar",
+      "name": "Past continuous",
+      "description": "Actions in progress at a time in the past.",
+      "entry_level": "A2"
+    },
+    {
+      "id": "grammar.past_perfect",
+      "module": "grammar",
+      "name": "Past perfect",
+      "description": "The earlier of two past events: had + past participle.",
+      "entry_level": "B1"
+    },
+    {
+      "id": "grammar.future_forms",
+      "module": "grammar",
+      "name": "Future forms",
+      "description": "will for predictions, decisions and promises.",
+      "entry_level": "A2"
+    },
+    {
+      "id": "grammar.modal_verbs",
+      "module": "grammar",
+      "name": "Modal verbs",
+      "description": "can, must, should, might... + the base form.",
+      "entry_level": "A2"
+    },
+    {
+      "id": "grammar.passive_voice",
+      "module": "grammar",
+      "name": "Passive voice",
+      "description": "be + past participle when the subject receives the action.",
+      "entry_level": "B1"
+    },
+    {
+      "id": "grammar.relative_clauses",
+      "module": "grammar",
+      "name": "Relative clauses",
+      "description": "who, which, whose, where.",
+      "entry_level": "B1"
+    },
+    {
+      "id": "grammar.gerunds_infinitives",
+      "module": "grammar",
+      "name": "Gerunds and infinitives",
+      "description": "enjoy doing, want to do.",
+      "entry_level": "B1"
+    },
+    {
+      "id": "grammar.agreement",
+      "module": "grammar",
+      "name": "Subject-verb agreement",
+      "description": "is/are, has/have, does/do, there is/are.",
+      "entry_level": "A1"
+    },
+    {
+      "id": "grammar.determiners_quantifiers",
+      "module": "grammar",
+      "name": "Quantifiers",
+      "description": "much/many, few/little.",
+      "entry_level": "A2"
+    },
+    {
+      "id": "grammar.pronouns",
+      "module": "grammar",
+      "name": "Pronouns",
+      "description": "Reflexive and possessive pronouns.",
+      "entry_level": "A1"
+    },
+    {
+      "id": "grammar.adjectives_adverbs",
+      "module": "grammar",
+      "name": "Adjectives and adverbs",
+      "description": "quick or quickly?",
+      "entry_level": "A2"
+    },
+    {
+      "id": "grammar.conjunctions",
+      "module": "grammar",
+      "name": "Linking words",
+      "description": "although + clause, despite + noun.",
+      "entry_level": "B2"
+    },
+    {
+      "id": "grammar.sentence_structure",
+      "module": "grammar",
+      "name": "Word order",
+      "description": "Putting words in the right order.",
+      "entry_level": "A1"
+    },
+    {
+      "id": "vocabulary.c1",
+      "module": "vocabulary",
+      "name": "Vocabulary C1",
+      "description": "Advanced words (Open English WordNet, word frequency).",
+      "entry_level": "C1"
+    },
+    {
+      "id": "reading.comprehension",
+      "module": "reading",
+      "name": "Reading comprehension",
+      "description": "Main idea, details, inference and vocabulary in texts.",
+      "entry_level": "A1"
+    }
+  ],
+  "grammar_points": {
+    "present_simple": {
+      "skill_id": "grammar.present_simple_continuous",
+      "name": "Present simple",
+      "name_vi": "Hiện tại đơn",
+      "level": "A1"
+    },
+    "present_continuous": {
+      "skill_id": "grammar.present_simple_continuous",
+      "name": "Present continuous",
+      "name_vi": "Hiện tại tiếp diễn",
+      "level": "A1"
+    },
+    "past_simple": {
+      "skill_id": "grammar.past_simple_present_perfect",
+      "name": "Past simple",
+      "name_vi": "Quá khứ đơn",
+      "level": "A1"
+    },
+    "present_perfect": {
+      "skill_id": "grammar.past_simple_present_perfect",
+      "name": "Present perfect",
+      "name_vi": "Hiện tại hoàn thành",
+      "level": "A2"
+    },
+    "past_continuous": {
+      "skill_id": "grammar.past_continuous",
+      "name": "Past continuous",
+      "name_vi": "Quá khứ tiếp diễn",
+      "level": "A2"
+    },
+    "past_perfect": {
+      "skill_id": "grammar.past_perfect",
+      "name": "Past perfect",
+      "name_vi": "Quá khứ hoàn thành",
+      "level": "B1"
+    },
+    "future_will": {
+      "skill_id": "grammar.future_forms",
+      "name": "Future with will",
+      "name_vi": "Tương lai đơn",
+      "level": "A2"
+    },
+    "modals": {
+      "skill_id": "grammar.modal_verbs",
+      "name": "Modal verbs",
+      "name_vi": "Động từ khuyết thiếu",
+      "level": "A2"
+    },
+    "conditionals": {
+      "skill_id": "grammar.conditionals",
+      "name": "Conditionals",
+      "name_vi": "Câu điều kiện",
+      "level": "B1"
+    },
+    "passive": {
+      "skill_id": "grammar.passive_voice",
+      "name": "Passive voice",
+      "name_vi": "Câu bị động",
+      "level": "B1"
+    },
+    "relative_clauses": {
+      "skill_id": "grammar.relative_clauses",
+      "name": "Relative clauses",
+      "name_vi": "Mệnh đề quan hệ",
+      "level": "B1"
+    },
+    "articles": {
+      "skill_id": "grammar.articles",
+      "name": "Articles a / an",
+      "name_vi": "Mạo từ a / an",
+      "level": "A1"
+    },
+    "prepositions_time": {
+      "skill_id": "grammar.prepositions_time_place",
+      "name": "Prepositions of time",
+      "name_vi": "Giới từ chỉ thời gian",
+      "level": "A1"
+    },
+    "comparatives": {
+      "skill_id": "grammar.comparatives_superlatives",
+      "name": "Comparatives",
+      "name_vi": "So sánh hơn",
+      "level": "A2"
+    },
+    "superlatives": {
+      "skill_id": "grammar.comparatives_superlatives",
+      "name": "Superlatives",
+      "name_vi": "So sánh nhất",
+      "level": "A2"
+    },
+    "gerunds_infinitives": {
+      "skill_id": "grammar.gerunds_infinitives",
+      "name": "Gerunds and infinitives",
+      "name_vi": "Danh động từ và động từ nguyên mẫu",
+      "level": "B1"
+    },
+    "subject_verb_agreement": {
+      "skill_id": "grammar.agreement",
+      "name": "Subject-verb agreement",
+      "name_vi": "Hòa hợp chủ ngữ - động từ",
+      "level": "A1"
+    },
+    "there_be": {
+      "skill_id": "grammar.agreement",
+      "name": "There is / there are",
+      "name_vi": "There is / there are",
+      "level": "A1"
+    },
+    "questions_do": {
+      "skill_id": "grammar.agreement",
+      "name": "Questions with do / does",
+      "name_vi": "Câu hỏi với do / does",
+      "level": "A1"
+    },
+    "quantifiers": {
+      "skill_id": "grammar.determiners_quantifiers",
+      "name": "Quantifiers",
+      "name_vi": "Từ chỉ số lượng",
+      "level": "A2"
+    },
+    "reflexive_pronouns": {
+      "skill_id": "grammar.pronouns",
+      "name": "Reflexive pronouns",
+      "name_vi": "Đại từ phản thân",
+      "level": "A2"
+    },
+    "possessives": {
+      "skill_id": "grammar.pronouns",
+      "name": "Possessive adjectives and pronouns",
+      "name_vi": "Tính từ và đại từ sở hữu",
+      "level": "A1"
+    },
+    "adjectives_adverbs": {
+      "skill_id": "grammar.adjectives_adverbs",
+      "name": "Adjectives and adverbs",
+      "name_vi": "Tính từ và trạng từ",
+      "level": "A2"
+    },
+    "contrast_linkers": {
+      "skill_id": "grammar.conjunctions",
+      "name": "although / despite",
+      "name_vi": "although / despite",
+      "level": "B2"
+    },
+    "word_order": {
+      "skill_id": "grammar.sentence_structure",
+      "name": "Word order",
+      "name_vi": "Trật tự từ",
+      "level": "A1"
+    }
+  }
+}

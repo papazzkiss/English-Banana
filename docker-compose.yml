@@ -1,0 +1,129 @@
+# One host, one command:  docker compose up --build
+#   web  http://localhost:3010     api  http://localhost:8010/docs     metrics  :8010/metrics
+# Public HTTPS link (Cloudflare quick tunnel to the web app only; the API stays on localhost):
+#   COOKIE_SECURE=true docker compose --profile public up -d --build
+#   docker compose logs tunnel | grep -o 'https://[a-z0-9-]*\.trycloudflare\.com'
+# LLM: Ollama on the host by default, model Qwen3-30B-A3B (docs/QWEN3_30B.md). Pull it once:
+#   scripts/setup_ollama_model.sh          (settings: .env, see .env.example)
+# No Ollama installed?  docker compose --profile ollama up -d --build
+#   then: scripts/setup_ollama_model.sh --docker   and set OLLAMA_URL=http://ollama:11434
+services:
+  api:
+    build: .
+    ports: ["127.0.0.1:8010:8000"]
+    environment:
+      BANANA_DATABASE_URL: postgresql+psycopg://banana:banana@db:5432/banana
+      BANANA_REDIS_URL: redis://redis:6379/0
+      BANANA_LLM_PROVIDER: ${LLM_PROVIDER:-ollama}
+      BANANA_OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      BANANA_OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen3:30b-a3b-q4_K_M}
+      BANANA_LLM_CONTEXT_LENGTH: ${LLM_CONTEXT_LENGTH:-8192}
+      BANANA_LLM_TIMEOUT_SECONDS: ${LLM_TIMEOUT_SECONDS:-240}
+      BANANA_LLM_MAX_RETRIES: ${LLM_MAX_RETRIES:-1}
+      BANANA_LLM_TEMPERATURE: ${LLM_TEMPERATURE:-}
+      BANANA_LLM_MAX_OUTPUT_TOKENS: ${LLM_MAX_OUTPUT_TOKENS:-}
+      BANANA_LLM_KEEP_ALIVE: ${LLM_KEEP_ALIVE:-30m}
+      BANANA_LLM_WARM_UP: ${LLM_WARM_UP:-true}
+      BANANA_LLM_FALLBACK_MODEL: ${LLM_FALLBACK_MODEL:-}
+      BANANA_LLM_THINKING: ${LLM_THINKING:-true}
+      BANANA_LLM_THINK_BUDGET: ${LLM_THINK_BUDGET:-1024}
+      BANANA_STT_PROVIDER: ${STT_PROVIDER:-whisper}
+      BANANA_WHISPER_MODEL: ${WHISPER_MODEL:-base.en}
+      BANANA_TTS_PROVIDER: ${TTS_PROVIDER:-piper}
+      BANANA_TTS_MODEL_DIR: /models/piper
+      BANANA_REQUIRE_REVIEWED_CONTENT: ${REQUIRE_REVIEWED_CONTENT:-false}
+      BANANA_LOG_JSON: "true"
+      BANANA_COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      BANANA_CORS_ORIGINS: '["http://localhost:3010"]'
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    # question-bank recordings are mounted, not baked into the image (hundreds of MB)
+    volumes: ["models:/models", "./content/bank/audio:/app/content/bank/audio:ro"]
+    depends_on:
+      db: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./frontend
+      # the proxy must outlast the API's LLM timeout (tutor, chat and AI Monkey wait in-request)
+      args: {API_INTERNAL_URL: http://api:8000, LLM_TIMEOUT_SECONDS: "${LLM_TIMEOUT_SECONDS:-240}"}
+    ports: ["127.0.0.1:3010:3000"]
+    depends_on:
+      api: {condition: service_healthy}
+    restart: unless-stopped
+
+  tunnel:
+    image: cloudflare/cloudflared:2025.8.1
+    profiles: ["public"]
+    # Quick tunnel: no Cloudflare account, but the URL changes whenever this container restarts.
+    # For a fixed hostname create a named tunnel and run `tunnel run --token <token>` instead.
+    command: ["tunnel", "--no-autoupdate", "--url", "http://web:3000"]
+    depends_on: [web]
+    restart: unless-stopped
+
+  # Fixed public HTTPS link (Tailscale Funnel), unlike the quick tunnel above whose URL changes
+  # on every restart: https://banana-english.<your-tailnet>.ts.net -> the web app only.
+  #   COOKIE_SECURE=true docker compose --profile funnel up -d
+  #   docker compose logs funnel     (first time: open the login link it prints)
+  funnel:
+    image: tailscale/tailscale:v1.102.5
+    profiles: ["funnel"]
+    hostname: banana-english
+    environment:
+      TS_HOSTNAME: banana-english
+      TS_STATE_DIR: /var/lib/tailscale
+      TS_USERSPACE: "true"
+      TS_SERVE_CONFIG: /config/serve.json
+      TS_AUTHKEY: ${TS_AUTHKEY:-}  # .env; without it, log in once with the printed link
+      TS_AUTH_ONCE: "true"  # the key only registers the machine; restarts reuse the saved login
+    volumes: ["tailscale:/var/lib/tailscale", "./tailscale:/config:ro"]
+    depends_on: [web]
+    restart: unless-stopped
+
+  db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_DB: banana, POSTGRES_USER: banana, POSTGRES_PASSWORD: banana}
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U banana -d banana"]
+      interval: 5s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 20
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["ollama"]
+    volumes: ["ollama:/root/.ollama", "./ollama:/modelfiles:ro"]
+
+  # LLM benchmark (Qwen3-8B Q4_K_M / Q5_K_M / Q6_K / Q8_0 by default). Never changes the
+  # production model (it has no BANANA_OLLAMA_MODEL and uses its own bench/* aliases). While it
+  # runs it unloads every model to measure cold loads: production reloads on its next request. Results: benchmarks/results/<suite>/{results.json,results.csv,report.md}
+  #   docker compose --profile benchmark run --rm benchmark                      # quick smoke
+  #   docker compose --profile benchmark run --rm benchmark --suite full --pull  # full
+  benchmark:
+    build: .
+    profiles: ["benchmark"]
+    entrypoint: ["python", "-m", "banana_english.benchmark"]
+    command: ["--suite", "quick"]
+    user: "${BENCH_UID:-1000}:${BENCH_GID:-1000}"  # results owned by the host user
+    environment:
+      BANANA_OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      HOME: /tmp
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    volumes: ["./benchmarks/results:/app/benchmarks/results"]
+
+volumes:
+  tailscale:
+  pgdata:
+  models:
+  ollama:

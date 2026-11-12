@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "skills": {
+    "vocabulary": {
+      "questions": 26000,
+      "passages": 0,
+      "shards": [
+        {
+          "file": "questions/vocabulary-000.jsonl.gz",
+          "records": 5000,
+          "sha256": "618fa19639bde969bbbade5c5c811e71073ff020daddb9e0b445cb58b0c68613"
+        },
+        {
+          "file": "questions/vocabulary-001.jsonl.gz",
+          "records": 5000,
+          "sha256": "3261d13cd8c65fe97655fe0990174faf951256084a5adc84f57f3bb7749e1333"
+        },
+        {
+          "file": "questions/vocabulary-002.jsonl.gz",
+          "records": 5000,
+          "sha256": "3b58c59b4da7f1f31ef407ac724061e98a1ab4f0f8aefa0cc6b49f4da89114cb"
+        },
+        {
+          "file": "questions/vocabulary-003.jsonl.gz",
+          "records": 5000,
+          "sha256": "d62b297805374091b3f0fb287b705776f35c03bc8b043abd0f62c78fdd2e931b"
+        },
+        {
+          "file": "questions/vocabulary-004.jsonl.gz",
+          "records": 5000,
+          "sha256": "31b0e336d366f36da2ea4454c983ed1c4e4c5822cf21a1f6cd553718ca98cddd"
+        },
+        {
+          "file": "questions/vocabulary-005.jsonl.gz",
+          "records": 1000,
+          "sha256": "d3184694d5a701bb3fee521c28e38c71bcbc9ca0e9d9c21384b145d7388b16d3"
+        }
+      ],
+      "generated_at": "2026-09-29T09:54:51+00:00"
+    },
+    "reading": {
+      "questions": 26010,
+      "passages": 6391,
+      "shards": [
+        {
+          "file": "questions/reading-000.jsonl.gz",
+          "records": 5000,
+          "sha256": "43739e9881b7f33e86fb92151c7031e4c3209e270196bf07b898f251ebc55c3a"
+        },
+        {
+          "file": "questions/reading-001.jsonl.gz",
+          "records": 5000,
+          "sha256": "bdcf06adcbb435f16731fef994c3a514d276e72881685678a53997737546eb46"
+        },
+        {
+          "file": "questions/reading-002.jsonl.gz",
+          "records": 5000,
+          "sha256": "ad6d7b0ab4060efde5ac75e7cc59d5b5167999f8b27e695bf405b463e44c835e"
+        },
+        {
+          "file": "questions/reading-003.jsonl.gz",
+          "records": 5000,
+          "sha256": "ea8897e61c2a3e09284b04903b3089bac33377a2ac8694b46fa90cfc7ecabbe0"
+        },
+        {
+          "file": "questions/reading-004.jsonl.gz",
+          "records": 5000,
+          "sha256": "4f97a528e558b7012c3fd9067a5b0155dbd9d2ba8a86fb38f63601de1684ffee"
+        },
+        {
+          "file": "questions/reading-005.jsonl.gz",
+          "records": 1010,
+          "sha256": "ee0c3973f557d48b24719887936a09c8e0e5cbc234b3a4a59b3451098157c747"
+        },
+        {
+          "file": "passages/reading-000.jsonl.gz",
+          "records": 5000,
+          "sha256": "44273b6a74a3aa78e6ca29ea0ef86849fc824ba2720ec15ad538c6c38f049a01"
+        },
+        {
+          "file": "passages/reading-001.jsonl.gz",
+          "records": 1391,
+          "sha256": "0ff890de6cb3cc4c0c0b40a29b00d1d86816216c38f725866c056b97de178bab"
+        }
+      ],
+      "generated_at": "2026-09-29T09:52:18+00:00"
+    },
+    "grammar": {
+      "questions": 26000,
+      "passages": 0,
+      "shards": [
+        {
+          "file": "questions/grammar-000.jsonl.gz",
+          "records": 5000,
+          "sha256": "caa1b95c22e651cf0aeee720ede5d95b56518f153361ed2a27bd1e6d094c916b"
+        },
+        {
+          "file": "questions/grammar-001.jsonl.gz",
+          "records": 5000,
+          "sha256": "a08fd775de573cf93291cd1c585eda4c4ea88b943b99803f786ba4d735e2bc43"
+        },
+        {
+          "file": "questions/grammar-002.jsonl.gz",
+          "records": 5000,
+          "sha256": "1c9137f66a371a3c26238243bd16e30721d553cc6cc48c523733a421970660b7"
+        },
+        {
+          "file": "questions/grammar-003.jsonl.gz",
+          "records": 5000,
+          "sha256": "bf8414283181c9d1aa93d499b19a618383a25289073991dae86d40ac69846a1e"
+        },
+        {
+          "file": "questions/grammar-004.jsonl.gz",
+          "records": 5000,
+          "sha256": "5dcaf7fc70152ed09495e369fa6941cc7696df5df18bee6e5481736acc1f660e"
+        },
+        {
+          "file": "questions/grammar-005.jsonl.gz",
+          "records": 1000,
+          "sha256": "32cb305a6077e61163c84bbb3ac6a18eecdf4121eb4d6aa4bb02987038bae04f"
+        }
+      ],
+      "generated_at": "2026-09-29T10:15:29+00:00"
+    },
+    "listening": {
+      "questions": 25380,
+      "passages": 6640,
+      "shards": [
+        {
+          "file": "questions/listening-000.jsonl.gz",
+          "records": 5000,
+          "sha256": "bbdfd86dd2e8ab71501680c1799b053fe74a22a962bc7d2dd018210b30cbc683"
+        },
+        {
+          "file": "questions/listening-001.jsonl.gz",
+          "records": 5000,
+          "sha256": "23faf37bcc1e444c96c7c93126b976e1ef7e229e1f566d2727b8572a4effdf6c"
+        },
+        {
+          "file": "questions/listening-002.jsonl.gz",
+          "records": 5000,
+          "sha256": "db1feca4b31f4041d0057c1a33619271846c28e4b6a158a0fd0ea07e51d5ddfb"
+        },
+        {
+          "file": "questions/listening-003.jsonl.gz",
+          "records": 5000,
+          "sha256": "d19d961f87c40b0e3acbfce7bd01f9d717bdf1185bd99e2670360ba5ab77f6e7"
+        },
+        {
+          "file": "questions/listening-004.jsonl.gz",
+          "records": 5000,
+          "sha256": "9b946739dd74826b1cf0edc73b0ab502a616ff08aae1e50d91b812c8e6269e1a"
+        },
+        {
+          "file": "questions/listening-005.jsonl.gz",
+          "records": 380,
+          "sha256": "79ff1ee2246b60b3fd46b106c529f27db26f3cf4f3e8ac63f59af7c3f89d249a"
+        },
+        {
+          "file": "passages/listening-000.jsonl.gz",
+          "records": 5000,
+          "sha256": "368f0561cfed2e9eed0068be5d497c372a56662c73c15eefbceabbbde7073115"
+        },
+        {
+          "file": "passages/listening-001.jsonl.gz",
+          "records": 1640,
+          "sha256": "666696d541116282cc1f2c16c631d4474ce8f8eda13be4ba11b25ecd648261a9"
+        }
+      ],
+      "generated_at": "2026-09-29T14:04:17+00:00"
+    }
+  },
+  "total_questions": 103390,
+  "hash": "e9f31d95675337512ce32252112d162213eb3e5c9a3cb3bb49dce68ce107c965"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "review_policy": "AI-written candidates (pending_review) until approved with scripts/review_content.py.",
+  "prompts": [
+    {
+      "id": "sp.intro.001",
+      "title": "Introduce yourself",
+      "cefr_level": "A1",
+      "difficulty": "easy",
+      "instruction": "Introduce yourself. Say your name, where you are from, and what you usually do every day.",
+      "target_grammar": "grammar.present_simple_continuous",
+      "min_seconds": 15,
+      "max_seconds": 60,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "sp.weekend.001",
+      "title": "Your last weekend",
+      "cefr_level": "A2",
+      "difficulty": "easy",
+      "instruction": "Talk about what you did last weekend. Where did you go, who were you with, and what did you do?",
+      "target_grammar": "grammar.past_simple_present_perfect",
+      "min_seconds": 20,
+      "max_seconds": 60,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "sp.hometown.001",
+      "title": "Your home town",
+      "cefr_level": "A2",
+      "difficulty": "medium",
+      "instruction": "Describe your home town. Compare it with a big city you know: which one is bigger, busier or more interesting?",
+      "target_grammar": "grammar.comparatives_superlatives",
+      "min_seconds": 20,
+      "max_seconds": 75,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "sp.proud.001",
+      "title": "Something you are proud of",
+      "cefr_level": "B1",
+      "difficulty": "medium",
+      "instruction": "Talk about something you have done that you are proud of. When did it happen and why was it important to you?",
+      "target_grammar": "grammar.past_simple_present_perfect",
+      "min_seconds": 30,
+      "max_seconds": 90,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "sp.plans.001",
+      "title": "Plans for free time",
+      "cefr_level": "B1",
+      "difficulty": "medium",
+      "instruction": "What will you do if you have some free time next month? And what would you do if you had a whole year off?",
+      "target_grammar": "grammar.conditionals",
+      "min_seconds": 30,
+      "max_seconds": 90,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    },
+    {
+      "id": "sp.directions.001",
+      "title": "Directions to your favourite café",
+      "cefr_level": "B1",
+      "difficulty": "hard",
+      "instruction": "Explain how to get from your home to your favourite café. Say what is next to it, opposite it, and when it is open.",
+      "target_grammar": "grammar.prepositions_time_place",
+      "min_seconds": 30,
+      "max_seconds": 90,
+      "review": {"status": "pending_review", "authored_by": "ai:claude-opus-5-5", "reviewed_by": null, "reviewed_at": null, "notes": null}
+    }
+  ]
+}

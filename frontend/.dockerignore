@@ -1,0 +1,8 @@
+node_modules
+.next
+# Android app (Capacitor): not part of the web image
+android
+mobile
+assets
+capacitor.config.ts
+scripts/android-*

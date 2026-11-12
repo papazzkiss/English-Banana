@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Banana English</title>
+  <link rel="stylesheet" href="launcher.css" />
+</head>
+<body>
+  <!-- Android launcher: opens the Banana English server (the whole app runs there). -->
+  <main class="launcher">
+    <div class="brand" aria-hidden="true"><span class="mark">🍌</span></div>
+    <h1>Banana English</h1>
+
+    <section id="connecting" class="panel" hidden>
+      <div class="spinner" aria-hidden="true"></div>
+      <p class="status" role="status">Connecting to <strong id="host"></strong>…</p>
+      <button type="button" id="change" class="link">Change server</button>
+    </section>
+
+    <form id="setup" class="panel" hidden novalidate>
+      <p id="error" class="error" role="alert" hidden></p>
+      <label for="url">Server address</label>
+      <input id="url" type="url" inputmode="url" autocomplete="url" autocapitalize="off"
+        spellcheck="false" placeholder="https://….trycloudflare.com" required />
+      <button type="submit" class="btn">Connect</button>
+      <p class="hint">
+        The link of your Banana English server, starting with https://. On the PC that runs
+        it: <code>docker compose logs tunnel | grep trycloudflare</code>
+      </p>
+    </form>
+  </main>
+  <script src="config.js"></script>
+  <script src="launcher.js"></script>
+</body>
+</html>

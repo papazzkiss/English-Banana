@@ -1,0 +1,1148 @@
+{
+  "benchmark": "banana_english.benchmark",
+  "dataset_version": "bench_dataset_v1",
+  "dataset_notes": "Grammar-correction answers and labels come from content/calibration/grammar_calibration.json (labels AI-drafted, not yet teacher-verified). Grammar-explanation mistakes use the real exercises (teacher rule = exercise explanation). Conversations use the real scenarios. Checks are deterministic; see scoring.py.",
+  "suite": "quick",
+  "started_at": "2026-09-28T04:15:12+00:00",
+  "finished_at": "2026-09-28T04:19:00+00:00",
+  "duration_min": 3.8,
+  "config": {
+    "runs": 1,
+    "warmup": 1,
+    "num_ctx": 4096,
+    "seeds": [
+      43
+    ],
+    "sampling": {
+      "top_k": 20,
+      "top_p": 0.95,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0
+    },
+    "reference_template": "qwen3:8b",
+    "tests": 6,
+    "test_ids": [
+      "gc.01",
+      "ge.01",
+      "cv.02",
+      "vo.01",
+      "cq.01",
+      "vs.01"
+    ],
+    "prompt_versions": [
+      "bench_complex_question_v1",
+      "bench_vocabulary_v1",
+      "conversation_reply_v1",
+      "grammar_assessment_v6",
+      "monkey_chat_v1",
+      "tutor_explain_v2"
+    ]
+  },
+  "host": {
+    "cpu": "AMD Ryzen 5 7535HS with Radeon Graphics",
+    "logical_cpus": 12,
+    "ram_gb": 14.3,
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.41",
+    "ollama_version": "0.34.4"
+  },
+  "models_loaded_before_run": [],
+  "availability": [
+    {
+      "label": "Qwen3-8B Q4_K_M",
+      "quantization": "Q4_K_M",
+      "source": "cli",
+      "status": "ok",
+      "tag": "qwen3:8b",
+      "detail": "",
+      "size_gb": 5.23,
+      "parameter_size": "8.2B",
+      "template_digest": "ae370d884f10",
+      "aligned_from": null
+    },
+    {
+      "label": "Qwen3-8B Q5_K_M",
+      "quantization": "Q5_K_M",
+      "source": "cli",
+      "status": "ok",
+      "tag": "bench/qwen3-8b-gguf-q5_k_m:aligned",
+      "detail": "weights of hf.co/Qwen/Qwen3-8B-GGUF:Q5_K_M, template + defaults of qwen3:8b",
+      "size_gb": 5.85,
+      "parameter_size": "8.19B",
+      "template_digest": "ae370d884f10",
+      "aligned_from": "hf.co/Qwen/Qwen3-8B-GGUF:Q5_K_M"
+    }
+  ],
+  "summary": [
+    {
+      "model": "Qwen3-8B Q4_K_M",
+      "requests": 6,
+      "errors": 0,
+      "contract_failures": 0,
+      "quality": 94.8,
+      "quality_by_run": [
+        94.8
+      ],
+      "dimensions": {
+        "grammar": 83.3,
+        "explanation": 80.0,
+        "naturalness": 100.0,
+        "instruction_following": 100.0,
+        "relevance": 100.0,
+        "vocabulary": 100.0,
+        "conversation": 100.0
+      },
+      "categories": {
+        "complex": 100.0,
+        "conversation": 100.0,
+        "grammar_correction": 71.4,
+        "grammar_explanation": 100.0,
+        "vocabulary": 100.0,
+        "voice": 100.0
+      },
+      "ttft_p50_s": 6.41,
+      "ttft_p95_s": 14.06,
+      "latency_p50_s": 11.63,
+      "latency_p95_s": 22.76,
+      "latency_mean_s": 13.0,
+      "tokens_per_s": 8.58,
+      "output_tokens_mean": 52.5,
+      "load_s": 12.332070148,
+      "memory_gb": 5.94,
+      "vram_gb": 0.0,
+      "warmup_errors": [],
+      "performance": 100.0,
+      "overall": 95.3
+    },
+    {
+      "model": "Qwen3-8B Q5_K_M",
+      "requests": 6,
+      "errors": 0,
+      "contract_failures": 0,
+      "quality": 93.7,
+      "quality_by_run": [
+        93.7
+      ],
+      "dimensions": {
+        "grammar": 83.3,
+        "explanation": 100.0,
+        "naturalness": 100.0,
+        "instruction_following": 100.0,
+        "relevance": 100.0,
+        "vocabulary": 72.7,
+        "conversation": 100.0
+      },
+      "categories": {
+        "complex": 100.0,
+        "conversation": 100.0,
+        "grammar_correction": 85.7,
+        "grammar_explanation": 100.0,
+        "vocabulary": 81.2,
+        "voice": 100.0
+      },
+      "ttft_p50_s": 11.93,
+      "ttft_p95_s": 25.91,
+      "latency_p50_s": 16.44,
+      "latency_p95_s": 39.85,
+      "latency_mean_s": 20.34,
+      "tokens_per_s": 7.92,
+      "output_tokens_mean": 60.67,
+      "load_s": 5.557400771,
+      "memory_gb": 6.56,
+      "vram_gb": 0.0,
+      "warmup_errors": [],
+      "performance": 81.5,
+      "overall": 92.5
+    }
+  ],
+  "generations": [
+    {
+      "model": "Qwen3-8B Q4_K_M",
+      "test_id": "gc.01",
+      "category": "grammar_correction",
+      "run": 1,
+      "ttft_s": 16.274257017999844,
+      "total_s": 25.68366727600005,
+      "output_tokens": 76,
+      "input_tokens": 633,
+      "tokens_per_s": 8.077008752076642,
+      "error": null,
+      "contract_ok": true,
+      "score": 71.42857142857143,
+      "checks": [
+        {
+          "type": "contract",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "1 sentences"
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "7% long"
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "verdict",
+          "dimension": "grammar",
+          "weight": 3.0,
+          "passed": true,
+          "detail": "is_correct=False"
+        },
+        {
+          "type": "correction",
+          "dimension": "grammar",
+          "weight": 2.0,
+          "passed": false,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "explanation",
+          "weight": 2.0,
+          "passed": false,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "relevance",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "{\"errors\": [{\"fragment\": \"I seen\", \"tag\": \"verb_form\", \"explanation\": \"The verb 'seen' is incorrect. It should be 'have seen' to use the present perfect tense.\"}], \"natural\": true, \"feedback\": \"You need to use 'have seen' with 'yesterday' to show the action is completed.\"}"
+    },
+    {
+      "model": "Qwen3-8B Q4_K_M",
+      "test_id": "ge.01",
+      "category": "grammar_explanation",
+      "run": 1,
+      "ttft_s": 7.405340152999997,
+      "total_s": 13.988007074999587,
+      "output_tokens": 57,
+      "input_tokens": 284,
+      "tokens_per_s": 8.659095072914138,
+      "error": null,
+      "contract_ok": true,
+      "score": 100.0,
+      "checks": [
+        {
+          "type": "contract",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "min_sentences",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "2 sentences"
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "2 sentences"
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "7% long"
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_all",
+          "dimension": "explanation",
+          "weight": 3.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "regex",
+          "dimension": "grammar",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "not_contains",
+          "dimension": "grammar",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "differs_from",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "relevance",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "{\"explanation\": \"The present perfect tense is used with uncompleted times, like 'today' or 'this week', but not with completed times like 'yesterday'. So we use the past simple tense instead.\", \"example\": \"She wrote the letter last week.\"}"
+    },
+    {
+      "model": "Qwen3-8B Q4_K_M",
+      "test_id": "cv.02",
+      "category": "conversation",
+      "run": 1,
+      "ttft_s": 6.085996332999457,
+      "total_s": 8.351834692000011,
+      "output_tokens": 20,
+      "input_tokens": 241,
+      "tokens_per_s": 8.825735845726138,
+      "error": null,
+      "contract_ok": true,
+      "score": 100.0,
+      "checks": [
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": "2 sentences"
+        },
+        {
+          "type": "max_words",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "12 words"
+        },
+        {
+          "type": "not_contains",
+          "dimension": "conversation",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "not_contains",
+          "dimension": "conversation",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "0% long"
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "relevance",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "conversation",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "That’ll be £3.50. Would you like to pay with cash or card?"
+    },
+    {
+      "model": "Qwen3-8B Q4_K_M",
+      "test_id": "vo.01",
+      "category": "vocabulary",
+      "run": 1,
+      "ttft_s": 2.4512995790000787,
+      "total_s": 6.725477865000357,
+      "output_tokens": 38,
+      "input_tokens": 96,
+      "tokens_per_s": 8.89054845793437,
+      "error": null,
+      "contract_ok": true,
+      "score": 100.0,
+      "checks": [
+        {
+          "type": "contract",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "1 sentences"
+        },
+        {
+          "type": "max_words",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "10 words"
+        },
+        {
+          "type": "max_words",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "7 words"
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "0% long"
+        },
+        {
+          "type": "contains_any",
+          "dimension": "vocabulary",
+          "weight": 3.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "not_contains",
+          "dimension": "explanation",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "regex",
+          "dimension": "relevance",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "vocabulary",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "{\"definition\": \"not willing to do something because you don't want to\", \"example\": \"She was reluctant to leave her hometown.\", \"synonym\": \"unwilling\"}"
+    },
+    {
+      "model": "Qwen3-8B Q4_K_M",
+      "test_id": "cq.01",
+      "category": "complex",
+      "run": 1,
+      "ttft_s": 2.3265945299999657,
+      "total_s": 12.187840733000485,
+      "output_tokens": 86,
+      "input_tokens": 96,
+      "tokens_per_s": 8.72044415858513,
+      "error": null,
+      "contract_ok": true,
+      "score": 100.0,
+      "checks": [
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_words",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": "60 words"
+        },
+        {
+          "type": "plain_speech",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "5% long"
+        },
+        {
+          "type": "contains_all",
+          "dimension": "explanation",
+          "weight": 3.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "regex",
+          "dimension": "grammar",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_all",
+          "dimension": "relevance",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "\"If I were you\" is correct. It uses the subjunctive mood to express a hypothetical situation.  \nFor example: \"If I were you, I would take the job.\"  \n\"If I was you\" is incorrect in formal writing because \"was\" is used for real past actions, not hypotheticals.  \nIn informal speech, \"was\" might be used, but \"were\" is preferred in standard English."
+    },
+    {
+      "model": "Qwen3-8B Q4_K_M",
+      "test_id": "vs.01",
+      "category": "voice",
+      "run": 1,
+      "ttft_s": 6.740612878999855,
+      "total_s": 11.06890224899962,
+      "output_tokens": 38,
+      "input_tokens": 267,
+      "tokens_per_s": 8.779310768656382,
+      "error": null,
+      "contract_ok": true,
+      "score": 100.0,
+      "checks": [
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "plain_speech",
+          "dimension": "naturalness",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": "3 sentences"
+        },
+        {
+          "type": "max_words",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "19 words"
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "0% long"
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "grammar",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "relevance",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "has_question",
+          "dimension": "conversation",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "You went to the park yesterday with your dog? That sounds fun! Did you play with your dog there? (Tip: we say \"I went\", not \"I goed\".)"
+    },
+    {
+      "model": "Qwen3-8B Q5_K_M",
+      "test_id": "gc.01",
+      "category": "grammar_correction",
+      "run": 1,
+      "ttft_s": 30.099383565000608,
+      "total_s": 46.3141407410003,
+      "output_tokens": 121,
+      "input_tokens": 633,
+      "tokens_per_s": 7.462374062415913,
+      "error": null,
+      "contract_ok": true,
+      "score": 85.71428571428571,
+      "checks": [
+        {
+          "type": "contract",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "2 sentences"
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "0% long"
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "verdict",
+          "dimension": "grammar",
+          "weight": 3.0,
+          "passed": true,
+          "detail": "is_correct=False"
+        },
+        {
+          "type": "correction",
+          "dimension": "grammar",
+          "weight": 2.0,
+          "passed": false,
+          "detail": "I have seen that film yesterday."
+        },
+        {
+          "type": "contains_any",
+          "dimension": "explanation",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "relevance",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "{\n  \"errors\": [\n    {\n      \"fragment\": \"I seen\",\n      \"tag\": \"verb_form\",\n      \"explanation\": \"The verb 'seen' is incorrect. The correct form is 'have seen' because the present perfect tense requires the auxiliary verb 'have' followed by the past participle.\"\n    }\n  ],\n  \"natural\": true,\n  \"feedback\": \"You need to use 'have seen' instead of 'seen' to make the sentence correct. Good job on the rest!\",\n  \"corrected_answer\": \"I have seen that film yesterday.\"\n}"
+    },
+    {
+      "model": "Qwen3-8B Q5_K_M",
+      "test_id": "ge.01",
+      "category": "grammar_explanation",
+      "run": 1,
+      "ttft_s": 13.353741066000111,
+      "total_s": 20.450346726000134,
+      "output_tokens": 57,
+      "input_tokens": 284,
+      "tokens_per_s": 8.031936105243727,
+      "error": null,
+      "contract_ok": true,
+      "score": 100.0,
+      "checks": [
+        {
+          "type": "contract",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "min_sentences",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "2 sentences"
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "2 sentences"
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "7% long"
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_all",
+          "dimension": "explanation",
+          "weight": 3.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "regex",
+          "dimension": "grammar",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "not_contains",
+          "dimension": "grammar",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "differs_from",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "relevance",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "{\"explanation\": \"The present perfect tense is used with time expressions that are not specific, like 'ever' or 'never'. 'Yesterday' is a specific time, so we use the past simple tense instead.\", \"example\": \"I saw that movie last week.\"}"
+    },
+    {
+      "model": "Qwen3-8B Q5_K_M",
+      "test_id": "cv.02",
+      "category": "conversation",
+      "run": 1,
+      "ttft_s": 11.286561439000252,
+      "total_s": 13.69914110100035,
+      "output_tokens": 20,
+      "input_tokens": 241,
+      "tokens_per_s": 8.289588484103678,
+      "error": null,
+      "contract_ok": true,
+      "score": 100.0,
+      "checks": [
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": "2 sentences"
+        },
+        {
+          "type": "max_words",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "12 words"
+        },
+        {
+          "type": "not_contains",
+          "dimension": "conversation",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "not_contains",
+          "dimension": "conversation",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "0% long"
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "relevance",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "conversation",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "That will be £3.50. Would you like to pay with cash or card?"
+    },
+    {
+      "model": "Qwen3-8B Q5_K_M",
+      "test_id": "vo.01",
+      "category": "vocabulary",
+      "run": 1,
+      "ttft_s": 4.423332744000618,
+      "total_s": 8.716525995000666,
+      "output_tokens": 36,
+      "input_tokens": 96,
+      "tokens_per_s": 8.385148504473825,
+      "error": null,
+      "contract_ok": true,
+      "score": 81.25,
+      "checks": [
+        {
+          "type": "contract",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "1 sentences"
+        },
+        {
+          "type": "max_words",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "10 words"
+        },
+        {
+          "type": "max_words",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "7 words"
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "0% long"
+        },
+        {
+          "type": "contains_any",
+          "dimension": "vocabulary",
+          "weight": 3.0,
+          "passed": false,
+          "detail": ""
+        },
+        {
+          "type": "not_contains",
+          "dimension": "explanation",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "regex",
+          "dimension": "relevance",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "vocabulary",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "{\"definition\": \"not willing to do something because of fear or hesitation\", \"example\": \"She was reluctant to leave her hometown.\", \"synonym\": \"hesitant\"}"
+    },
+    {
+      "model": "Qwen3-8B Q5_K_M",
+      "test_id": "cq.01",
+      "category": "complex",
+      "run": 1,
+      "ttft_s": 4.338156700999207,
+      "total_s": 16.54714119899927,
+      "output_tokens": 99,
+      "input_tokens": 96,
+      "tokens_per_s": 8.108687869329232,
+      "error": null,
+      "contract_ok": true,
+      "score": 100.0,
+      "checks": [
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_words",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": "73 words"
+        },
+        {
+          "type": "plain_speech",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "5% long"
+        },
+        {
+          "type": "contains_all",
+          "dimension": "explanation",
+          "weight": 3.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "regex",
+          "dimension": "grammar",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_all",
+          "dimension": "relevance",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "\"If I were you\" is correct. It uses the subjunctive mood to express hypothetical situations.  \n\"If I were you\" is used for imaginary or unreal scenarios, like \"If I were you, I would study harder.\"  \n\"If I was you\" is incorrect in formal English because \"was\" is used for real past situations, not hypothetical ones.  \nHowever, \"if I was\" is sometimes used in informal speech, though it's not grammatically correct in standard English."
+    },
+    {
+      "model": "Qwen3-8B Q5_K_M",
+      "test_id": "vs.01",
+      "category": "voice",
+      "run": 1,
+      "ttft_s": 12.574957557000744,
+      "total_s": 16.328988298000695,
+      "output_tokens": 31,
+      "input_tokens": 267,
+      "tokens_per_s": 8.257750498195415,
+      "error": null,
+      "contract_ok": true,
+      "score": 100.0,
+      "checks": [
+        {
+          "type": "no_reasoning_leak",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "plain_speech",
+          "dimension": "naturalness",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "max_sentences",
+          "dimension": "instruction_following",
+          "weight": 2.0,
+          "passed": true,
+          "detail": "2 sentences"
+        },
+        {
+          "type": "max_words",
+          "dimension": "instruction_following",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "13 words"
+        },
+        {
+          "type": "simple_words",
+          "dimension": "vocabulary",
+          "weight": 1.0,
+          "passed": true,
+          "detail": "0% long"
+        },
+        {
+          "type": "not_repetitive",
+          "dimension": "naturalness",
+          "weight": 1.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "grammar",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "contains_any",
+          "dimension": "relevance",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "type": "has_question",
+          "dimension": "conversation",
+          "weight": 2.0,
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "output": "You went to the park yesterday with your dog. Did you have fun? (Tip: we say \"I went\", not \"I goed\".)"
+    }
+  ]
+}
